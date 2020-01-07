@@ -1,0 +1,117 @@
+/* configuration and variables */
+// 命名空间:spm for ymc or  ivv for iview
+@css-prefix             : spm;
+// 区块名字:grid for BEM or '' for iview
+@grid-prefix-cls: ~"@{css-prefix}@{grid-NB-contact}grid";
+// 元素名字:row col
+@grid-E-list: row col;
+// 修饰名字: gutter type order justify align
+
+
+// 状态名字:
+
+@grid-columns                : 24;
+@grid-gutter-width           : 0;
+
+// 空间与区块连接符：-
+@grid-NB-contact: ~'-';
+// 区块与元素连接符：'__' for BEM or '-' for iview
+@grid-BE-contact: ~'__';
+// 元素与修饰连接符：'--' for BEM or '-' for iview
+@grid-EM-contact:~'--';
+// 元素与状态连接符：' ' or '-'
+@grid-ES-contact:~'-';
+@import "../settings/screen.less";
+
+/* Mixins and functions. */
+@import "../tools/clearfix.less";
+@import "../tools/grid.less";
+
+.@{row-prefix-cls} {
+    .make-row();
+    display: block;
+
+    &@{grid-EM-contact}flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &:before,
+        &:after {
+            display: flex;
+        }
+        // x轴起点
+        &-start {
+            justify-content: flex-start;
+        }
+        // x轴中间
+        &-center {
+            justify-content: center;
+        }
+        // x轴终点
+        &-end {
+            justify-content: flex-end;
+        }
+        // x轴平分
+        &-space-between {
+            justify-content: space-between;
+        }
+        // x轴有间隔地平分
+        &-space-around {
+            justify-content: space-around;
+        }
+        // 顶部对齐
+        &-top {
+            align-items: flex-start;
+        }
+        // 居中对齐
+        &-middle {
+            align-items: center;
+        }
+        // 底部对齐
+        &-bottom {
+            align-items: flex-end;
+        }
+    };
+}
+
+.@{col-prefix-cls} {
+    position: relative;
+    display: block;
+}
+
+.make-grid();
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-grid(-xs);
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+    .make-grid(-sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+    .make-grid(-md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+    .make-grid(-lg);
+}

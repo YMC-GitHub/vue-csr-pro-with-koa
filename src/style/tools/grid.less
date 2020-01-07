@@ -1,0 +1,70 @@
+/* 命名空间：某行 */
+@row-prefix-cls: ~"@{grid-prefix-cls}@{grid-BE-contact}row";
+/* 命名空间：某列 */
+@col-prefix-cls: ~"@{grid-prefix-cls}@{grid-BE-contact}col";
+
+/* 传入列的间隔宽度，创建某行 */
+.make-row(@gutter: @grid-gutter-width) {
+    position: relative;
+    margin-left: (@gutter / -2);
+    margin-right: (@gutter / -2);
+    height: auto;
+    .clearfix;
+}
+
+/* 传入列数，设置漂浮的列*/
+.float-grid-columns(@class) {
+    .col(@index) { // initial
+        @item: ~".@{col-prefix-cls}@{grid-EM-contact}span@{class}-@{index}";
+        .col((@index + 1), @item);
+    }
+    .col(@index, @list) when (@index =< @grid-columns) { // general
+        @item: ~".@{col-prefix-cls}@{grid-EM-contact}span@{class}-@{index}";
+        .col((@index + 1), ~"@{list}, @{item}");
+    }
+    .col(@index, @list) when (@index > @grid-columns) { // terminal
+        @{list} {
+            float: left;
+            flex: 0 0 auto;
+        }
+    }
+    .col(1); // kickstart it
+}
+
+/* 传入修饰：，设置漂浮的列*/
+.loop-grid-columns(@index, @class) when (@index > 0) {
+    .@{col-prefix-cls}@{grid-EM-contact}span@{class}-@{index} {
+        display: block;
+        width: percentage((@index / @grid-columns));
+    }
+    .@{col-prefix-cls}@{grid-EM-contact}push@{class}-@{index} {
+        left: percentage((@index / @grid-columns));
+    }
+    .@{col-prefix-cls}@{grid-EM-contact}pull@{class}-@{index} {
+        right: percentage((@index / @grid-columns));
+    }
+    .@{col-prefix-cls}@{grid-EM-contact}offset@{class}-@{index} {
+        margin-left: percentage((@index / @grid-columns));
+    }
+    .@{col-prefix-cls}@{grid-EM-contact}order@{class}-@{index} {
+        order: @index;
+    }
+    .loop-grid-columns((@index - 1), @class);
+}
+
+.loop-grid-columns(@index, @class) when (@index = 0) {
+    .@{col-prefix-cls}@{grid-EM-contact}span@{class}-@{index} {
+        display: none;
+    }
+    .@{col-prefix-cls}@{grid-EM-contact}push@{class}-@{index} {
+        left: auto;
+    }
+    .@{col-prefix-cls}@{grid-EM-contact}pull@{class}-@{index} {
+        right: auto;
+    }
+}
+
+.make-grid(@class: ~'') {
+    .float-grid-columns(@class);
+    .loop-grid-columns(@grid-columns, @class);
+}
