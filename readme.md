@@ -1,4 +1,4 @@
-# vue-spa-dev-with-webpack
+# vue-csr-dev-with-webpack
 
 ## desc
 
