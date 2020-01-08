@@ -25,98 +25,98 @@ note: remember to take care of their version with each other.
 
 `webpack.config.base.js`
 
-01.set file context dir [config](./build/webpack.config.base.js#L42)
+01.set file context dir [config](./build/webpack.conf.base.js#L42)
 
-02.set files enty [config](./build/webpack.config.base.js#L44-#L46)
+02.set files enty [config](./build/webpack.conf.base.js#L44-#L46)
 
-03.set files output with project config [config](./build/webpack.config.base.js#L48-#L54)
+03.set files output with project config [config](./build/webpack.conf.base.js#L48-#L54)
 
-04.set where to find npm lib [config](./build/webpack.config.base.js#L56-#L62)
+04.set where to find npm lib [config](./build/webpack.conf.base.js#L56-#L62)
 
-05.set files match and how to handle the matched files [config](./build/webpack.config.base.js#L63-#L103)
+05.set files match and how to handle the matched files [config](./build/webpack.conf.base.js#L63-#L103)
 
-06.use eslint to lint with project config [config](./build/webpack.config.base.js#L67-#L67)
+06.use eslint to lint with project config [config](./build/webpack.conf.base.js#L67-#L67)
 
-07.handle .vue files with vue-loader [config](./build/webpack.config.base.js#L68-#L72)
+07.handle .vue files with vue-loader [config](./build/webpack.conf.base.js#L68-#L72)
 
-08.handle .js files with babel-loader [config](./build/webpack.config.base.js#L73-#L77)
+08.handle .js files with babel-loader [config](./build/webpack.conf.base.js#L73-#L77)
 
-09.match image files and handle  with url-loader or file-loader [config](./build/webpack.config.base.js#L78-#L85)
+09.match image files and handle  with url-loader or file-loader [config](./build/webpack.conf.base.js#L78-#L85)
 
-10.match mp4,mp3 and other media files and handle  with url-loader or file-loader [config](./build/webpack.config.base.js#L86-#L93)
+10.match mp4,mp3 and other media files and handle  with url-loader or file-loader [config](./build/webpack.conf.base.js#L86-#L93)
 
-11.match font files and handle  with url-loader or file-loader [config](./build/webpack.config.base.js#L94-#L101)
+11.match font files and handle  with url-loader or file-loader [config](./build/webpack.conf.base.js#L94-#L101)
 
-12.use freindly formmater for eslint [config](./build/webpack.config.base.js#L35-#L35)
+12.use freindly formmater for eslint [config](./build/webpack.conf.base.js#L35-#L35)
 
 `webpack.config.dev.js`
 
-01.set devtool for dev mode [config](./build/webpack.config.dev.js#L25-#L25)
+01.set devtool for dev mode [config](./build/webpack.conf.dev.js#L25-#L25)
 
-02.set webpack-dev-server options [config](./build/webpack.config.dev.js#L28-#L50)
+02.set webpack-dev-server options [config](./build/webpack.conf.dev.js#L28-#L50)
 
-03.set process.env for webpack dev env with DefinePlugin [config](./build/webpack.config.dev.js#L52-#L54)
+03.set process.env for webpack dev env with DefinePlugin [config](./build/webpack.conf.dev.js#L52-#L54)
 
-04.set hot module replace [config](./build/webpack.config.dev.js#L55-#L55)
+04.set hot module replace [config](./build/webpack.conf.dev.js#L55-#L55)
 
-05.tell HMR shows correct file names in console on update [config](./build/webpack.config.dev.js#L56-#L56)
+05.tell HMR shows correct file names in console on update [config](./build/webpack.conf.dev.js#L56-#L56)
 
-06.tell no emit on errors [config](./build/webpack.config.dev.js#L57-#L57)
+06.tell no emit on errors [config](./build/webpack.conf.dev.js#L57-#L57)
 
-07.auto genarate index.html [config](./build/webpack.config.dev.js#L59-#L63)
+07.auto genarate index.html [config](./build/webpack.conf.dev.js#L59-#L63)
 
-08.copy custom static assets [config](./build/webpack.config.dev.js#L65-#L71)
+08.copy custom static assets [config](./build/webpack.conf.dev.js#L65-#L71)
 
-09.set friendly errors [config](./build/webpack.config.dev.js#L87-#L94)
+09.set friendly errors [config](./build/webpack.conf.dev.js#L87-#L94)
 
-10.set notify on errors with project config [config](./build/webpack.config.dev.js#L91-#L93)
+10.set notify on errors with project config [config](./build/webpack.conf.dev.js#L91-#L93)
 
-11.set style loader for css/less/sass/scss/stylus/styl/postcss file [config](./build/webpack.config.dev.js#L21-#L23)
+11.set style loader for css/less/sass/scss/stylus/styl/postcss file [config](./build/webpack.conf.dev.js#L21-#L23)
 
 
 `webpack.config.prod.js`
 
-01.set the devtool tool with config [config](./build/webpack.config.prod.js#L56-#L56)
+01.set the devtool tool with config [config](./build/webpack.conf.prod.js#L56-#L56)
 
-02.set files output with project config [config](./build/webpack.config.prod.js#L57-#L62)
+02.set files output with project config [config](./build/webpack.conf.prod.js#L57-#L62)
 
-03.set process.env for webpack pro env with DefinePlugin [config](./build/webpack.config.prod.js#L66-#L68)
+03.set process.env for webpack pro env with DefinePlugin [config](./build/webpack.conf.prod.js#L66-#L68)
 
-04.set uglify js [config](./build/webpack.config.prod.js#L70-#L78)
+04.set uglify js [config](./build/webpack.conf.prod.js#L70-#L78)
 
-05.extract css into its own file [config](./build/webpack.config.prod.js#L80-#L87)
+05.extract css into its own file [config](./build/webpack.conf.prod.js#L80-#L87)
 
-06.compress extracted CSS [config](./build/webpack.config.prod.js#L90-#L94)
+06.compress extracted CSS [config](./build/webpack.conf.prod.js#L90-#L94)
 
-07.generate index.html  with template for pro or test [config](./build/webpack.config.prod.js#L98-#L111)
+07.generate index.html  with template for pro or test [config](./build/webpack.conf.prod.js#L98-#L111)
 
-08.keep module.id stable when vendor modules does not change [config](./build/webpack.config.prod.js#L114-#L114)
+08.keep module.id stable when vendor modules does not change [config](./build/webpack.conf.prod.js#L114-#L114)
 
-09.enable scope hoisting [config](./build/webpack.config.prod.js#L116-#L116)
+09.enable scope hoisting [config](./build/webpack.conf.prod.js#L116-#L116)
 
-10.split vendor js into its own file [config](./build/webpack.config.prod.js#L118-#L130)
+10.split vendor js into its own file [config](./build/webpack.conf.prod.js#L118-#L130)
 
-11.extract webpack runtime and module manifest to its own file [config](./build/webpack.config.prod.js#L133-#L136)
+11.extract webpack runtime and module manifest to its own file [config](./build/webpack.conf.prod.js#L133-#L136)
 
-12.extracts shared chunks from code splitted chunks and bundles them [config](./build/webpack.config.prod.js#L140-#L145)
+12.extracts shared chunks from code splitted chunks and bundles them [config](./build/webpack.conf.prod.js#L140-#L145)
 
-13.copy custom static assets [config](./build/webpack.config.prod.js#L148-#L154)
+13.copy custom static assets [config](./build/webpack.conf.prod.js#L148-#L154)
 
-14.set style loader for css/less/sass/scss/stylus/styl/postcss file [config](./build/webpack.config.prod.js#L48-#L53)
+14.set style loader for css/less/sass/scss/stylus/styl/postcss file [config](./build/webpack.conf.prod.js#L48-#L53)
 
-15.use gzip with config data [config](./build/webpack.config.prod.js#L159-#L175)
+15.use gzip with config data [config](./build/webpack.conf.prod.js#L159-#L175)
 
-16.use bundle analyzer with config data [config](./build/webpack.config.prod.js#L177-#L180)
+16.use bundle analyzer with config data [config](./build/webpack.conf.prod.js#L177-#L180)
 
 `webpack.config.test.js`
 
-01.set process.env for webpack test env with DefinePlugin [config](./build/webpack.config.prod.js#L23-#L25)
+01.set process.env for webpack test env with DefinePlugin [config](./build/webpack.conf.prod.js#L23-#L25)
 
-02.to make lang="scss" work in test [config](./build/webpack.config.prod.js#L15-#L21)
+02.to make lang="scss" work in test [config](./build/webpack.conf.prod.js#L15-#L21)
 
-03.set style loader for css/less/sass/scss/stylus/styl/postcss file [config](./build/webpack.config.prod.js#L12-#L12)
+03.set style loader for css/less/sass/scss/stylus/styl/postcss file [config](./build/webpack.conf.prod.js#L12-#L12)
 
-04.no need for app entry during tests [config](./build/webpack.config.prod.js#L30-#L30)
+04.no need for app entry during tests [config](./build/webpack.conf.prod.js#L30-#L30)
 
 
 `.babelrc`
