@@ -4,7 +4,6 @@
 
 vue app csr production with koa  (csr mode)
 
-note: you can also start your project with [Vue CLI](https://cli.vuejs.org/)
 
 ## project diretory constructor
 
