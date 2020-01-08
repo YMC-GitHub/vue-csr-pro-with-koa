@@ -1,0 +1,20 @@
+{
+  "name": "vue-csr-pro-with-koa",
+  "version": "1.0.0",
+  "description": "vue app csr production with koa  (csr mode)",
+  "author": "yemiancheng <ymc-github@gmail.com>",
+  "private": true,
+  "scripts": {
+    "start:csr-server": "node csr-server",
+    "pro:csr": "node csr-server"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3"
+  }
+}
