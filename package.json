@@ -1,0 +1,36 @@
+{
+  "name": "vue-csr-pro-with-koa",
+  "version": "1.0.0",
+  "description": "vue app csr production with koa  (csr mode)",
+  "author": "yemiancheng <ymc-github@gmail.com>",
+  "private": true,
+  "scripts": {
+    "start": "node csr-server",
+    "start:csr-server": "node csr-server",
+    "pro:csr": "node csr-server"
+  },
+  "engines": {
+    "node": ">=7.6",
+    "npm": ">=4.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "chalk": "^2.3.0",
+    "es6-promise": "^4.2.2",
+    "koa": "^2.3.0",
+    "koa-compress": "^2.0.0",
+    "koa-favicon": "^2.0.0",
+    "koa-logger": "^3.0.1",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "koa2-connect-history-api-fallback": "^0.1.2",
+    "lru-cache": "^4.1.1",
+    "vue": "^2.5.13",
+    "vue-i18n": "^8.1.0",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.13",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "license": "MIT"
+}
