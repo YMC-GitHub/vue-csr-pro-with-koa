@@ -2,8 +2,7 @@
 
 ## desc
 
-vue app csr production with koa  (csr mode)
-
+vue app csr production with koa (csr mode)
 
 ## project diretory constructor
 
@@ -12,74 +11,37 @@ get detail [here](./note/dir-construtor.md)
 ## some important deps for csr production
 
 - koa (use koa framework)
-- koa-route (use route help you?)
+- koa-router (use route help you?)
 - koa-static (use static file serve)
+- koa-favicon (to quickly use favicon)
+- koa-logger (use log for serve?)
+- koa-compress (use zlip to compress)
+- lru-cache (mirco cache sth)
+- koa2-connect-history-api-fallback (handle spa 404?)
 
 ## some config
 
-`config/server.js`
 
-01.where the host is? [config](./config/server.js#L5)
+`config/server.config.js`
 
-02.which port will use?  [config](./config/server.js#L7)
+01.where the host is? [config](./config/server.config.js#L8)
 
-03.where the html file to serve?  [config](./config/server.js#L9)
+02.which port will use?  [config](./config/server.config.js#L10)
 
-04.what is the name of html files?   [config](./config/server.js#11)
+03.where the html file to serve?  [config](./config/server.config.js#L12)
 
-05.where the static file to serve?   [config](./config/server.js#13)
+04.what is the name of html files?   [config](./config/server.config.js#14)
 
+05.where the static file to serve?   [config](./config/server.config.js#16)
 
 ## some command
 
-```sh
-#install his deps
-: <<cmd
-#npm install
-#npm run install:csr
-./dev/npm-install-koa2.sh
-cmd
+``` bash
+# install dependencies
+npm install # or yarn install
 
-#devleop him
-: <<cmd
-#npm run dev:csr
-cmd
-
-#test him
-: <<cmd
-#npm run test
-#npm run test:unit
-#npm run test:e2e
-cmd
-
-#build him
-: <<cmd
-#npm run build:csr
-#npm run build:csr-client
-cmd
-
-#lint him(optional)
-: <<cmd
-#npm run lint
-#npm run lint:no-fix
-cmd
-
-#beautify him(optional)
-: <<cmd
-#npm run format
-cmd
-
-#publish him
-: <<cmd
-#pushish to github code manage,npm registry
-#npm run release
-cmd
-
-#run him
-: <<cmd
-#npm run start:csr-server
-npm run pro:csr
-cmd
+# serve in production mode
+npm start
 ```
 
 ## author
@@ -87,5 +49,4 @@ cmd
 yemiancheng <ymc-github@gmail.com>
 
 ## License
-
 MIT
