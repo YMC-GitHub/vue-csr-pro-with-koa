@@ -5,9 +5,9 @@
   "author": "yemiancheng <ymc-github@gmail.com>",
   "private": true,
   "scripts": {
-    "start": "node csr-server",
-    "start:csr-server": "node csr-server",
-    "pro:csr": "node csr-server"
+    "start": "node app/csr-server",
+    "start:csr-server": "node app/csr-server",
+    "pro:csr": "node app/csr-server"
   },
   "engines": {
     "node": ">= 6.0.0",
